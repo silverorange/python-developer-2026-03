@@ -49,6 +49,13 @@ uv run djlint . --lint
 uv run djlint . --reformat
 ```
 
+All linting can be checked with:
+
+```sh
+make lint-check
+make lint-fix
+```
+
 ## Dependencies
 
 Please use the [uv](https://docs.astral.sh/uv/) tool for dependency
