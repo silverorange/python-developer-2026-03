@@ -8,8 +8,8 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "blog/index.html")
 
 
-def detail(request: HttpRequest, pk: UUID) -> HttpResponse:
-    return render(request, "blog/detail.html")
+def detail(request: HttpRequest, id: UUID) -> HttpResponse:
+    return render(request, "blog/detail.html", {"id": id})
 
 
 def welcome(request: HttpRequest) -> HttpResponse:
