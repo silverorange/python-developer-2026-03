@@ -70,18 +70,27 @@ posts:
     JSON files.
 1.  Write an importer in Python that imports post and author data files from the
     `data` into the SQLite database configured in the Django project.
-1.  Update the post index view to load all published posts from the
-    database in reverse chronological order. Update the post index template to
-    render this list as HTML. Include the post titles and authors in the output.
-    Make clicking a post go to the post details.
-1.  Add a post detail route to the blog app that will load a published post
+1.  Update the post _index_ view to load all published posts from the
+    database in reverse chronological order.
+    - Update the template to render this list as HTML.
+    - Include the post titles and authors in the output.
+    - Make clicking a post go to the post details.
+1.  Add a post _detail_ route to the blog app that will load a published post
     from the database from the id in the URL.
-    - the post detail URL path should be of the form `posts/[id]`
-    - the post detail view and template should render the post content (title,
-      body, author) as HTML.
-    - _the post body is
-      formatted as Markdown and the HTML should include the formatted Markdown_.
-    - if the requested post is unavailable, show a 404 page.
+    - The URL path should be of the form `posts/[id]`.
+    - The view and template should render the post content (title, body,
+      author) as HTML.
+    - If the requested post is unavailable, show a 404 page.
+    - **The post body is formatted as Markdown and the HTML should include the
+      formatted Markdown.**
+1.  Add basic CSS to the _index_ and _detail_ views. The SCSS file
+    `static/src/main.scss` is set up as the main entrypoint for the index view
+    and can be used on the detail view as well.
+    - Use modern CSS best practices.
+    - If you know SCSS you may use SCSS features where appropriate, but they are
+      not required.
+    - No designs are provided. Do your best to make these basic pages visually
+      appealing.
 
 ## Success Criteria
 
@@ -92,6 +101,7 @@ We will evaluate your anonymized implementation based on the following criteria:
 - Correctness of task implementation
 - Use of provided tools
 - Error handling and security
+- CSS implementation
 - Testability of implementation and/or testing
 
 ## Coding Standard
